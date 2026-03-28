@@ -1,0 +1,44 @@
+# Starship Prompt Configuration
+# Clean, informative prompt inspired by fish defaults
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+
+[directory]
+truncation_length = 3
+truncation_symbol = '…/'
+style = 'bold cyan'
+
+[git_branch]
+format = ' [$branch]($style)'
+style = 'bold purple'
+
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'bold red'
+
+[nodejs]
+format = ' [$symbol($version)]($style)'
+symbol = ' '
+style = 'bold green'
+
+[python]
+format = ' [$symbol($version)]($style)'
+symbol = ' '
+style = 'bold yellow'
+
+[cmd_duration]
+min_time = 2_000
+format = ' [$duration]($style)'
+style = 'bold yellow'
